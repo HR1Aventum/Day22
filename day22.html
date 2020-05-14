@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+
+<body>
+    <script>
+        // 1.chunks
+        const chunks = (input, size) =>
+            Array.from({ length: Math.ceil(input.length / size) }, (v, i) =>
+                input.slice(i * size, i * size + size)
+            );
+        console.log(chunks([1, 2, 3, 4, 5], 2));
+
+        // 2.reverse 
+
+        const reverse = (InputArray) => {
+            return InputArray.map((i, j) => InputArray[InputArray.length - 1 - j])
+        }
+        console.log(reverse([1, 2, 3, 4, 5]));
+
+        // 3.join
+        const join = (input, sep = " ") => {
+            let result = ""
+            for (i = 0; i < input.length; i++) {
+                if (result) {
+                    result += sep;
+                }
+                result += input[i];
+            }
+            return result;
+        };
+
+        console.log(join([1, 2, 3, 4, 5], ","));
+        // 4. fill 
+        const fill = (input,element=" ") => {
+            Array.from({length: input.length}, (v, i) => input.push[element]);
+        }
+        console.log(fill([1, 2, 3, 4, 5],"a"));
+        
+        // 5. find a last index
+
+    const lastIndex = (input)=>{
+        return input[input.length-1]
+
+    }
+    console.log(lastIndex([1, 2, 3, 4, 5]));
+
+
+    </script>
+</body>
+
+</html>
